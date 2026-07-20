@@ -1,2 +1,0 @@
-# Tanakit Jansom — personal site
-
