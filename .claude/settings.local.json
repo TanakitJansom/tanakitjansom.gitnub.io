@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/Juram/Downloads/ronin-gh-pages/**)",
+      "Read(//c/Users/Juram/Downloads/**)",
+      "Bash(cd \"C:/Users/Juram/Downloads/ronin-gh-pages/ronin-gh-pages\" && rm -rf css fonts img js scss vendors Ronin-doc && rm -f *.html *.php prepros-6.config .DS_Store && echo \"=== remaining ===\" && ls -la)",
+      "PowerShell(powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\Juram\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Juram-Downloads-ronin-gh-pages-ronin-gh-pages\\\\7bf11764-2e99-4a19-96c0-95c1ef23a94c\\\\scratchpad\\\\serve.ps1\")",
+      "Bash(curl -s -o /dev/null -w \"status=%{http_code} bytes=%{size_download}\\\\n\" \"http://localhost:8848/\")",
+      "Bash(curl -s \"http://localhost:8848/\")",
+      "PowerShell($conn = Get-NetTCPConnection -LocalPort 8848 -State Listen -ErrorAction SilentlyContinue; if \\($conn\\) { $conn | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue }; Write-Output \"stopped server pid\\(s\\): $\\($conn.OwningProcess -join ','\\)\" } else { Write-Output \"nothing listening on 8848\" })",
+      "Bash(curl -s -o /dev/null -w \"index.html: %{http_code} %{size_download}b\\\\n\" http://localhost:8848/)",
+      "Bash(curl -s -o /dev/null -w \"style.css:  %{http_code} %{size_download}b\\\\n\" http://localhost:8848/style.css)",
+      "Bash(curl -s -o /dev/null -w \"script.js:  %{http_code} %{size_download}b\\\\n\" http://localhost:8848/script.js)",
+      "PowerShell($conn = Get-NetTCPConnection -LocalPort 8848 -State Listen -ErrorAction SilentlyContinue; if \\($conn\\) { $conn | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue }; Write-Output \"stopped\" } else { Write-Output \"nothing running\" })",
+      "Bash(xargs -n1 basename)",
+      "Bash(awk '$1>1')",
+      "Bash(mv vendors/linericon/style.css vendors/linericon/linericon-style.css)",
+      "Bash(mv vendors/nice-select/css/style.css vendors/nice-select/css/nice-select-style.css)",
+      "Bash(rm vendors/isotope/isotope-min.js)",
+      "Bash(perl -pi -e \"s{url\\\\\\('\\\\.\\\\./fonts/\\([^'\\\\\"?]+\\)}{url\\('\\\\$1}g\" font-awesome.min.css)",
+      "Bash(perl -pi -e \"s{url\\\\\\('fonts/\\([^'\\\\\"?]+\\)}{url\\('\\\\$1}g\" linericon-style.css)",
+      "Bash(perl -pi -e 's{url\\\\\\(\\(\\\\.\\\\./img/\\([^\\)]+\\)\\)\\\\\\)}{\"url\\(\" . \\($2 =~ s{.*/}{}r\\) . \"\\)\"}ge' style.css)",
+      "PowerShell(Get-Command python,py,node,npx -ErrorAction SilentlyContinue)",
+      "Bash(mkdir -p \"C:/Users/Juram/Downloads/ronin-gh-pages/ronin-gh-pages/.claude\")",
+      "PowerShell(py --version 2>&1)",
+      "PowerShell(py -0p 2>&1)",
+      "Bash(perl -0777 -pi -e 's{<section class=\"home_banner_area blog_banner\">.*?<!--================Footer Area =================-->}{<!--================Home Banner Area =================--> *)",
+      "Bash(perl -0777 -pi -e 's{<title>Eventure Multi</title>}{<title>Tanakit Jansom</title>}' elements.html)",
+      "Bash(perl -0777 -pi -e 's{<section class=\"sample-text-area\">.*?<!--================Footer Area =================-->}{<!--================Notice Area =================--> *)",
+      "Bash(perl -0777 -pi -e 's{<title>Ronin Multi</title>}{<title>Tanakit Jansom</title>}' portfolio-details.html)",
+      "Bash(perl -0777 -pi -e 's{<section class=\"portfolio_details_area p_120\">.*?<!--================Footer Area =================-->}{<!--================Notice Area =================--> *)",
+      "Bash(python3 -c ' *)",
+      "PowerShell(Get-Command magick, python, python3 -ErrorAction SilentlyContinue)",
+      "Bash(convert --version)",
+      "PowerShell(Get-Command node, npm, magick, python -ErrorAction SilentlyContinue)",
+      "PowerShell(foreach \\($cmd in @\\('node','npm','magick','python','pwsh'\\)\\) { try { $c = Get-Command $cmd -ErrorAction Stop; Write-Output \"$cmd -> $\\($c.Source\\)\" } catch { Write-Output \"$cmd -> NOT FOUND\" } })"
+    ]
+  }
+}
