@@ -3200,6 +3200,12 @@ html.dark_mode {
   html.dark_mode .contact_info .info_item h6 a {
     color: #eaeaea; }
 
+@media (max-width: 991px) {
+  html.dark_mode .header_area .navbar {
+    background: #1a1a1a; }
+  html.dark_mode .header_area .navbar .nav .nav-item .nav-link {
+    border-bottom-color: #333333; } }
+
 /* End Dark mode css
 ============================================================================================ */
 /*---------------------------------------------------- */
