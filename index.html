@@ -4,6 +4,7 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script>if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark_mode');</script>
         <link rel="icon" href="favicon.png" type="image/png">
         <title>Tanakit Jansom</title>
         <!-- Bootstrap CSS -->
@@ -32,6 +33,11 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 							<ul class="nav navbar-nav menu_nav ml-auto">
+								<li class="nav-item theme_toggle_item">
+									<button id="themeToggle" class="theme_toggle_btn" type="button" aria-label="Switch to dark mode">
+										<i class="fa fa-moon-o"></i>
+									</button>
+								</li>
 								<li class="nav-item"><a class="nav-link" href="#top">Home</a></li>
 								<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
 								<li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
@@ -227,5 +233,23 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src="bootstrap.min.js"></script>
         <script src="stellar.js"></script>
         <script src="theme.js"></script>
+        <script>
+            (function() {
+                var root = document.documentElement;
+                var btn = document.getElementById('themeToggle');
+                var icon = btn.querySelector('i');
+                function sync() {
+                    var isDark = root.classList.contains('dark_mode');
+                    icon.className = isDark ? 'fa fa-sun-o' : 'fa fa-moon-o';
+                    btn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+                }
+                sync();
+                btn.addEventListener('click', function() {
+                    root.classList.toggle('dark_mode');
+                    localStorage.setItem('theme', root.classList.contains('dark_mode') ? 'dark' : 'light');
+                    sync();
+                });
+            })();
+        </script>
     </body>
 </html>

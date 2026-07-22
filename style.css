@@ -3135,4 +3135,73 @@ h6 {
 ============================================================================================ */
 /*---------------------------------------------------- */
 
+/*----------------------------------------------------*/
+/* Dark mode css
+============================================================================================ */
+.header_area .navbar .nav .nav-item.theme_toggle_item {
+  display: flex;
+  align-items: center;
+  margin-right: 25px; }
+
+.theme_toggle_btn {
+  background: transparent;
+  border: 1px solid #222222;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #222222;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease-in-out; }
+  .theme_toggle_btn:hover {
+    background: #8490ff;
+    border-color: #8490ff;
+    color: #fff; }
+
+html.dark_mode {
+  background: #121212; }
+  html.dark_mode body {
+    background: #121212;
+    color: #b3b3b3; }
+  html.dark_mode .theme_toggle_btn {
+    border-color: #b3b3b3;
+    color: #b3b3b3; }
+  html.dark_mode .header_area .navbar .nav .nav-item .nav-link {
+    color: #eaeaea; }
+  html.dark_mode .header_area .navbar-brand {
+    color: #eaeaea; }
+  html.dark_mode .header_area.navbar_fixed .main_menu {
+    background: #1a1a1a;
+    box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.4); }
+  html.dark_mode .home_banner_area {
+    background: #121212; }
+  html.dark_mode .home_banner_area .banner_inner .banner_content {
+    color: #eaeaea; }
+  html.dark_mode .home_banner_area .banner_inner .banner_content p {
+    color: #aaaaaa; }
+  html.dark_mode .welcome_text h4 {
+    color: #eaeaea; }
+  html.dark_mode .edu_details h6 {
+    color: #eaeaea; }
+  html.dark_mode .edu_details .edu_degree {
+    color: #aaaaaa; }
+  html.dark_mode .edu_logo {
+    background: #fff;
+    border-color: #333333; }
+  html.dark_mode .main_title h2 {
+    color: #eaeaea; }
+  html.dark_mode .main_title p {
+    color: #aaaaaa; }
+  html.dark_mode .contact_info .info_item h6,
+  html.dark_mode .contact_info .info_item h6 a {
+    color: #eaeaea; }
+
+/* End Dark mode css
+============================================================================================ */
+/*---------------------------------------------------- */
+
 /*# sourceMappingURL=style.css.map */
